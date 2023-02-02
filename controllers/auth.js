@@ -5,9 +5,9 @@ const crypto = require('crypto');
 
 require('dotenv').config();
 
-const api_key = process.env.STREAM_API_KEY;
-const api_secret = process.env.STREAM_API_SECRET;
-const app_id = process.env.STREAM_APP_ID;
+const api_key = "y5gzamxpa3fu";
+const api_secret = "5arjqm89ugf3456kjzppuad4sr8te9xuku4g236e2e5ngzugp7t8uqsrr8yasdzr";
+const app_id = "1228054";
 
 const signup = async (req, res) => {
     try {
