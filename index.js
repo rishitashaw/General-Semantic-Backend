@@ -11,7 +11,7 @@ require('dotenv').config;
 app.use(express.static(__dirname + '/static'));
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.htm');

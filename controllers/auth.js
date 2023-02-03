@@ -11,6 +11,9 @@ const app_id = "1228054";
 
 const signup = async (req, res) => {
     try {
+        await client.updateAppSettings({
+            disable_permissions_checks: true,
+        });
         const { fullName, username, password, phoneNumber } = req.body;
 
         const userId = crypto.randomBytes(16).toString('hex');
@@ -31,6 +34,9 @@ const signup = async (req, res) => {
 
 const login = async (req, res) => {
     try {
+        await client.updateAppSettings({
+            disable_permissions_checks: true,
+        });
         const { username, password } = req.body;
 
         const serverClient = connect(api_key, api_secret, app_id);
